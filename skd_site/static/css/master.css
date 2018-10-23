@@ -2,7 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-image: url("../images/succulents_bkg.jpg");
   /* background-size: 120%; */
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 }
 
 #white_alpha {
@@ -25,12 +25,17 @@ body {
 .headline p {
   margin: 0px;
   display: inline-block;
-  padding: 1em;
+  padding: 0em;
   vertical-align: top;
 }
 
 .headline p {
   text-align: right;
   float: right;
-  padding: 3em;
+  padding: 1em;
+}
+
+.job-date {
+  color: rgba(100, 100, 100, 1.0);
+  font-size: 12px;
 }
