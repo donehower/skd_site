@@ -17,7 +17,7 @@ Migrate(app, db)
 #             Blue Prints           #
 # --------------------------------- #
 from skd_site.core.views import core
-from skd_site.weather.views import skd
+# from skd_site.weather.views import skd
 
 app.register_blueprint(core)
-app.register_blueprint(skd)
+# app.register_blueprint(skd)
