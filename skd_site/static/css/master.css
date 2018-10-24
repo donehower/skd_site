@@ -53,3 +53,7 @@ body {
   background-color: rgba(90, 0, 91, 0.4);
   color: white;
 }
+
+.special-card {
+  background-color: rgba(245, 245, 245, .4);
+}
