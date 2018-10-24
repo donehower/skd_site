@@ -9,6 +9,7 @@ def about():
 
     return render_template('about.html')
 
+
 @core.route('/contact', methods=['GET', 'POST'])
 def contact_info():
 
