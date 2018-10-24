@@ -39,3 +39,8 @@ body {
   color: rgba(100, 100, 100, 1.0);
   font-size: 12px;
 }
+
+.contact-title {
+  color: rgba(35, 35, 35, 1.0);
+  font-size: 20px;
+}
