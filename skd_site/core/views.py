@@ -8,3 +8,8 @@ core = Blueprint('core', __name__)
 def about():
 
     return render_template('about.html')
+
+@core.route('/contact', methods=['GET', 'POST'])
+def contact_info():
+
+    return render_template('contact_info.html')
