@@ -15,6 +15,13 @@ def contact_info():
 
     return render_template('contact_info.html')
 
+
+@core.route('/projects', methods=['GET', 'POST'])
+def projects():
+
+    return render_template('projects.html')
+
+
 @core.route('/campaign_notebook', methods=['GET', 'POST'])
 def campaign_notebook():
 
