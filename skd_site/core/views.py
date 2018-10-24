@@ -14,3 +14,8 @@ def about():
 def contact_info():
 
     return render_template('contact_info.html')
+
+@core.route('/campaign_notebook', methods=['GET', 'POST'])
+def campaign_notebook():
+
+    return render_template('campaign_notebook.html')
