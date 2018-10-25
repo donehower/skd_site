@@ -1,36 +1,17 @@
+
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.0rem;
   background-image: url("../images/succulents_bkg.jpg");
   /* background-size: 120%; */
   background-attachment: fixed;
 }
 
-@include media-breakpoint-down(xs) {
-  navbar {
-    font-size: 2.0rem;
-    }
-  }
-
-@include media-breakpoint-down(sm) {
-  body {
-    font-size: 1.2rem;
-  }
-  navbar {
-    font-size: : 1.5rem;
-  }
+.plain_text {
+  font-size: calc(22px - 0.25vw);
 }
 
-@include media-breakpoint-up(md) {
-  body {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  body {
-    font-size: 1.6rem;
-  }
+#plain_text {
+  font-size: calc(22px - 0.25vw);
 }
 
 #white_alpha {
@@ -47,7 +28,7 @@ body {
 
 #nav_bar_bg {
   background-color: rgba(90, 0, 91, 0.6);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .headline {
