@@ -1,46 +1,53 @@
-html {
-  font-size: 1rem;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.0rem;
   background-image: url("../images/succulents_bkg.jpg");
   /* background-size: 120%; */
   background-attachment: fixed;
 }
 
+@include media-breakpoint-down(xs) {
+  navbar {
+    font-size: 2.0rem;
+    }
+  }
+
+@include media-breakpoint-down(sm) {
+  body {
+    font-size: 1.2rem;
+  }
+  navbar {
+    font-size: : 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
 #white_alpha {
-  background-color: rgba(249, 249, 249, 0.8)
+  background-color: rgba(249, 249, 249, 0.8);
 }
 
 .white_alpha {
-  background-color: rgba(249, 249, 249, 0.8)
+  background-color: rgba(249, 249, 249, 0.8);
 }
 
 #white_solid {
-  background-color: rgba(255, 255, 255, 1.0)
+  background-color: rgba(255, 255, 255, 1.0);
 }
 
 #nav_bar_bg {
-  background-color: rgba(90, 0, 91, 0.6)
+  background-color: rgba(90, 0, 91, 0.6);
+  font-size: 1.3rem;
 }
 
 .headline {
