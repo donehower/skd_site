@@ -1,8 +1,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-image: url("../images/succulents_bkg.jpg");
-  /* background-size: 120%; */
+  background-image: url("../images/lotus_corner.jpg");
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 #white_alpha {
-  background-color: rgba(249, 249, 249, 0.8);
+  background-color: rgba(255, 255, 240, 0.7);
 }
 
 .white_alpha {
@@ -27,23 +27,35 @@ body {
 }
 
 #nav_bar_bg {
-  background-color: rgba(90, 0, 91, 0.6);
+  background-color: rgba(50, 50, 50, 0.6);
   font-size: 1.2rem;
+  color: rgba(255, 255, 245, 1.0)
 }
 
 .headline {
-  border-bottom: 1px solid rgba(90, 0, 91, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 1.0);
 }
 
-.headline h2,
-.headline p {
+.headline-about {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.6);
+  color: rgba(80, 80, 80, 1.0);
+}
+
+.text-about {
+  color: rgba(10, 10, 10, 1.0);
+  font-weight: 500;
+}
+
+.headline-about h2,
+.headline-about p {
   margin: 0px;
   display: inline-block;
   padding: 0em;
   vertical-align: top;
 }
 
-.headline p {
+.headline-about p {
   text-align: right;
   float: right;
   padding: 1em;
@@ -60,14 +72,14 @@ body {
 }
 
 #project_card_button {
-  background-color: rgba(90, 0, 91, 0.6);
-  color: white;
+  background-color: rgba(255, 255, 230, 0.6);
+  color: rgba(10, 10, 10, 0.8);
 }
 
 .special-card {
-  background-color: rgba(245, 245, 245, .6);
+  background-color: rgba(255, 255, 245, 0.5);
 }
 
 .special-card-heading {
-  background-color: rgba(245, 245, 245, 1.0);
+  background-color: rgba(255, 255, 245, 1.0);
 }
