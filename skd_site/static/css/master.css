@@ -65,5 +65,9 @@ body {
 }
 
 .special-card {
-  background-color: rgba(245, 245, 245, .4);
+  background-color: rgba(245, 245, 245, .6);
+}
+
+.special-card-heading {
+  background-color: rgba(245, 245, 245, 1.0);
 }
