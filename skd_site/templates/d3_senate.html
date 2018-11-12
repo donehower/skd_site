@@ -2,47 +2,48 @@
 {% block content %}
 <script src="https://d3js.org/d3.v4.js"></script>
 
-<div class="container d3_senage_page">
+<div class="d3_senate_page">
 <br>
+<div class="container">
 
     <div class="top_row row pb-1">
-        <!-- column one -->
-        <div class="col">
-            <div class="form-group">
-              <h5 class="headers">Years</h5>
-              <input type="range" class="form-control-range form-group" min="1988" max="2017" value="50" class="slider" id="year_slider">
-              <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_years">All Years</button>
+            <!-- column one -->
+            <div class="col">
+                <div class="form-group">
+                  <h5 class="headers">Years</h5>
+                  <input type="range" class="form-control-range form-group" min="1988" max="2017" value="50" class="slider" id="year_slider">
+                  <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_years">All Years</button>
+                </div>
             </div>
-        </div>
 
-        <!-- column two -->
-        <div class="col">
-          <div class="form-group">
-            <h5 class="headers">Vote Results</h5>
-            <select class="form-control form-control-sm form-group" id="result_dropdown"></select>
-            <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_results">All Results</button>
-          </div>
-        </div>
+            <!-- column two -->
+            <div class="col">
+              <div class="form-group">
+                <h5 class="headers">Vote Results</h5>
+                <select class="form-control form-control-sm form-group" id="result_dropdown"></select>
+                <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_results">All Results</button>
+              </div>
+            </div>
 
-        <!-- column three -->
-        <div class="col">
-            <div class="legend"></div>
-        </div>
+            <!-- column three -->
+            <div class="col">
+                <div class="legend"></div>
+            </div>
 
     </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div id="yearly_results"></div>
+      </div>
+      <div class="col">
+        <div id="vote_tallies"></div>
+      </div>
+    </div>
+
+
 </div>
-
-<div class="row">
-  <div class="col">
-    <div id="yearly_results"></div>
-  </div>
-  <div class="col">
-    <div id="vote_tallies"></div>
-  </div>
-</div>
-
-
-
     <script src="senate_votes_v2.js"></script>
 
 </div>
