@@ -2,7 +2,8 @@ var margin = {top: 55, right: 55, bottom: 55, left: 55},
     w = 450 - margin.left - margin.right,
     h = 450 - margin.top - margin.bottom;
 
-d3.json("all_votes.json", function(data) {
+// d3.json("all_votes.json", function(data) {
+function draw_dashboard(data) {
   data.forEach(function(d) {
     d.year = +d.year
     d.yeas = +d.yeas
@@ -122,7 +123,7 @@ d3.json("all_votes.json", function(data) {
       .attr("transform", "rotate(-90)")
       .attr("y", 0 - margin.left/1.5)
       .attr("x",0 - (h / 2))
-      .attr("dy", ".1.5em")
+      .attr("dy", "1.5em")
       .style("text-anchor", "middle")
       .attr("class", "yAxis_label")
       .text("Number of Votes");
@@ -543,5 +544,5 @@ d3.selectAll("#all_years")
   // for (var i=0; i<series.length; i++) {
   //   console.log(series[i].key)
   // }
-
-}) // end of json loads
+}
+// }) // end of json loads
