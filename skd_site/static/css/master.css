@@ -89,3 +89,47 @@ body {
 .special-card-heading {
   background-color: rgba(255, 255, 245, 1.0);
 }
+
+/* ------------------------- D3 Styling ------------------------------- */
+.legend {
+  overflow: visible;
+}
+
+.headers {
+  color: rgba(100, 100, 100, 1);
+}
+
+.xAxis_label, .yAxis_label {
+  fill: rgba(125, 125, 125, 1);
+  font-size: 16px;
+}
+
+.bar_xAxis path,
+.bar_yAxis path,
+.xAxis path,
+.yAxis path {
+  stroke-width: 0.5;
+}
+
+.bar_xAxis text,
+.bar_yAxis text,
+.xAxis text,
+.yAxis text {
+  fill: rgba(125, 125, 125, 1);
+}
+
+.circles {
+  fill-opacity: 0.2;
+  stroke-opacity: 0.6;
+  stroke-width: 0.5;
+}
+
+.toolText, .toolYear {
+  fill: black;
+  font-size: 12px;
+  overflow: visible;
+}
+
+.scatter_plot {
+  overflow: visible;
+}
