@@ -3,6 +3,7 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 <script type="text/javascript">
 $( document ).ready(function() {
+    $('body').css( {'background-image':"none"} );
     $.getJSON("{{ url_for('core._get_senate_data') }}", function(data) {
       draw_dashboard(data);
     });
