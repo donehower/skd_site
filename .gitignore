@@ -1,3 +1,4 @@
 *.pyc
 /instance
 senate_db_setup.py
+pymongo_scratch.py
