@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <script src="https://d3js.org/d3.v4.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+    $.getJSON("{{ url_for('core._get_senate_data') }}", function(data) {
+      draw_dashboard(data);
+    });
+});
+</script>
 
 <div class="d3_senate_page">
 <br>
@@ -44,7 +51,7 @@
 
 
 </div>
-    <script src="senate_votes.js"></script>
+    <script src="static/js/senate_votes.js"></script>
 
 </div>
 {% endblock %}
