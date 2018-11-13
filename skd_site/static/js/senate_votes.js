@@ -109,7 +109,7 @@ function draw_dashboard(data) {
         .attr("width", w + margin.left + margin.right + 100)
         .attr("height", h + margin.top + margin.bottom)
       .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin.left + "," + 5 + ")");
 
     s_bar.append("text")
         .attr("y", h + (margin.bottom/2))
@@ -150,7 +150,6 @@ function draw_dashboard(data) {
                   yr = -20,
                   cl = "rect.cat_"+d.key,
                   color = colors_dict[d.key];
-                  console.log(color)
               showResult(count, xr, yr, color);
             })
             .on("mouseout", hideResult);
@@ -304,7 +303,7 @@ function draw_dashboard(data) {
         .attr("height", h + margin.top + margin.bottom)
         .attr("class", "scatter_plot")
       .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin.left + "," + 5 + ")");
 
     scatter.append("g")
         .attr("class", "xAxis")
