@@ -143,7 +143,17 @@ function draw_dashboard(data) {
               return colors_dict[d.key];
             })
             .style("stroke", "white")
-            .style("stroke-width", 0.5);
+            .style("stroke-width", 0.5)
+            .on("mouseover", function(d, i) {
+              var count = d.key,
+                  xr = d3.event.pageX-120,
+                  yr = -20,
+                  cl = "rect.cat_"+d.key,
+                  color = colors_dict[d.key];
+                  console.log(color)
+              showResult(count, xr, yr, color);
+            })
+            .on("mouseout", hideResult);
 
         s_bar.append("g")
             .attr("transform", "translate(0" + "," + h + ")")
@@ -162,7 +172,7 @@ function draw_dashboard(data) {
             .selectAll("text")
                       .attr("y", 0)
                       .attr("x", -10);
-        // console.log(series[0].key)
+
         var rects = groups.selectAll("rect")
             .data(function(d) { return d; })
             .enter()
@@ -176,9 +186,67 @@ function draw_dashboard(data) {
             .attr("height", function(d) {
               return barYscale(d[0]) - barYscale(d[1]);
             })
-            .attr("width", barXscale.bandwidth());
+            .attr("width", barXscale.bandwidth())
+            .on("mouseover", function(d, i) {
+              var count = d[1]-d[0];
+              var xc = d3.event.pageX-120,
+                  yc = 10;
+              showCount(count, xc, yc);
+            })
+            .on("mouseout", hideCount);
+
     } // end of draw bars
     draw_bars(stacked_data);
+
+    var stackedTool = d3.select(".stackedTool")
+            .attr("display", "none");
+
+    stackedTool.append("text")
+          .attr("class", "stackedResult")
+          .attr("text-anchor", "middle");
+
+    stackedTool.append("text")
+          .attr("class", "stackedCount")
+          .attr("text-anchor", "middle")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("dy", -10);
+
+    function showResult(result, xr, yr, color) {
+          stackedTool.style("display", "inline")
+              .style("left", (d3.event.pageX-15) + "px")
+              .style("top", (250) + "px")
+              .style("background-color", color);
+
+          stackedTool.select("text.stackedResult")
+              .style("display", null)
+              .html(result + "</br>")
+              .attr("x", xr)
+              .attr("y", yr)
+              .attr("fill", color);
+    }
+
+    function showCount(count, xc, yc) {
+          stackedTool.style("display", "inline");
+
+          stackedTool.select("text.stackedCount")
+              .style("display", null)
+              .text(count)
+              .attr("x", xc)
+              .attr("y", yc);
+    }
+
+    function hideResult() {
+      stackedTool.style("display", "none");
+
+      stackedTool.select("text.stackedResult")
+              .style("display", "none");
+    }
+
+    function hideCount() {
+      stackedTool.select("text.stackedCount")
+              .style("display", "none");
+    }
 
     var alpha_bar = s_bar.append("svg")
         .attr("width", w + margin.left + margin.right + 100)
@@ -208,8 +276,6 @@ function draw_dashboard(data) {
         })
         .attr("height", h)
         .attr("width", barXscale.bandwidth());
-
-
 
   // --------------- SCATTER CHART ----------------- //
 
@@ -362,8 +428,6 @@ function draw_dashboard(data) {
                 filtered_stack = stacked_data.filter(function(d) {
                   return d.year == selectedYear;
                 });
-
-                draw_summary(filtered_stack)
 
                 var selected_bar = "rect.yr_" + selectedYear;
                 for (var i = 0; i < yrs.length; i++) {
