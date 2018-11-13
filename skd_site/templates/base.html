@@ -26,18 +26,23 @@
   </head>
 
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="nav_bar_bg">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark py-0" id="nav_bar_bg">
       <a class="navbar-brand font-weight-bold" href="{{ url_for('core.about') }}">SARAH DONEHOWER</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto ">
-          <a class="nav-link text-white font-weight-bold" href="{{ url_for('core.projects') }}">Projects</a>
-          <a class="nav-link text-white font-weight-bold" href="{{ url_for('core.about') }}">About</a>
-          <a class="nav-link text-white font-weight-bold" href="{{ url_for('core.contact_info') }}">Contact Info</a>
-      </div>
+          <div ><a class="nav-link text-white font-weight-bold" href="{{ url_for('core.projects') }}">Projects</a></div>
+          <div class="flex-grow-1"><a class="nav-link text-white font-weight-bold" href="{{ url_for('core.about') }}">About</a></div>
+          <!-- <a class="nav-link text-white font-weight-bold" href="{{ url_for('core.contact_info') }}">Contact Info</a> -->
+          <a class="nav-link text-white font-weight-bold text-right p-1" href="mailto:sarahdonehower@gmail.com">
+            <img src="/static/images/gmail_logo_v3.png" alt=""></a>
+          <a class="nav-link text-white font-weight-bold text-right p-1" href="https://linkedin.com/in/sarahdonehower">
+            <img src="/static/images/In-White-34px-R.png" alt=""></a>
+          <a class="nav-link text-white font-weight-bold text-right p-1" href="https://github.com/donehower">
+            <img src="/static/images/GitHub-Mark-Light-32px.png" alt=""></a>
+
       </div>
 
     </nav>
