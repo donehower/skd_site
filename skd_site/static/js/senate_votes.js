@@ -198,7 +198,7 @@ function draw_dashboard(data) {
     draw_bars(stacked_data);
 
     var stackedTool = d3.select(".stackedTool")
-            .attr("display", "none");
+            .attr("visibility", "hidden");
 
     stackedTool.append("text")
           .attr("class", "stackedResult")
@@ -212,13 +212,14 @@ function draw_dashboard(data) {
           .attr("dy", -10);
 
     function showResult(result, xr, yr, color) {
-          stackedTool.style("display", "inline")
+
+          stackedTool.style("visibility", "visible")
               .style("left", (d3.event.pageX-15) + "px")
               .style("top", (300) + "px")
               .style("background-color", color);
 
           stackedTool.select("text.stackedResult")
-              .style("display", null)
+              .style("visibility", "visible")
               .html(result + "</br>")
               .attr("x", xr)
               .attr("y", yr)
@@ -226,25 +227,26 @@ function draw_dashboard(data) {
     }
 
     function showCount(count, xc, yc) {
-          stackedTool.style("display", "inline");
+
+          stackedTool.style("visibility", "visible");
 
           stackedTool.select("text.stackedCount")
-              .style("display", null)
+              .style("visibility", "visible")
               .text(count)
               .attr("x", xc)
               .attr("y", yc);
     }
 
     function hideResult() {
-      stackedTool.style("display", "none");
+      stackedTool.style("visibility", "hidden");
 
       stackedTool.select("text.stackedResult")
-              .style("display", "none");
+              .style("visibility", "hidden");
     }
 
     function hideCount() {
       stackedTool.select("text.stackedCount")
-              .style("display", "none");
+              .style("visibility", "hidden");
     }
 
     var alpha_bar = s_bar.append("svg")
