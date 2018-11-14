@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <script src="https://d3js.org/d3.v4.js"></script>
+<script src="static/js/senate_votes.js"></script>
 <script type="text/javascript">
 $( document ).ready(function() {
     $('body').css( {'background-image':"none"} );
@@ -11,58 +12,47 @@ $( document ).ready(function() {
 </script>
 
 <div class="d3_senate_page">
-<br>
-<div class="container">
+    <br>
+    <div class="container">
 
-    <div class="top_row row py-1">
-      <div class="col-8">
-        <h2>Senate Votes from 1989 to 2017</h2>
-        Votes taken by the U.S. senate broken down by year and by results
-          of the vote.<br>
-        <span id="hint">[Hover over charts for details.]</span>
+        <div class="top_row row py-1">
+            <div class="col-8">
+                <h2>Senate Votes from 1989 to 2017</h2>
+                Votes taken by the U.S. senate broken down by year and by results
+                  of the vote.<br>
+                <span id="hint">[Hover over charts for details.]</span>
 
-        <div class="row align-items-end">
+                <div class="row align-items-end">
+                    <div class="col form-group">
+                          <h5 class="headers">Years</h5>
+                          <input type="range" class="form-control-range form-group" min="1988" max="2017" value="50" class="slider" id="year_slider">
+                          <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_years">All Years</button>
+                    </div>
 
-              <!-- column one -->
-              <div class="col">
-                  <div class="form-group">
-                    <h5 class="headers">Years</h5>
-                    <input type="range" class="form-control-range form-group" min="1988" max="2017" value="50" class="slider" id="year_slider">
-                    <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_years">All Years</button>
-                  </div>
-              </div>
-
-              <!-- column two -->
-              <div class="col">
-                <div class="form-group">
-                  <h5 class="headers">Vote Results</h5>
-                  <select class="form-control form-control-sm form-group" id="result_dropdown"></select>
-                  <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_results">All Results</button>
+                    <div class="col form-group">
+                        <h5 class="headers">Vote Results</h5>
+                        <select class="form-control form-control-sm form-group" id="result_dropdown"></select>
+                        <button type="button" class="btn btn-outline-secondary btn-sm form-group" id="all_results">All Results</button>
+                    </div>
                 </div>
-              </div>
+            </div>
+
+            <div class="col-4">
+                <div class="legend"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="col-4">
-        <!-- column three -->
-            <div class="legend"></div>
-      </div>
+        <div class="stackedTool"></div>
+
+        <div class="row">
+          <div class="col">
+              <div id="yearly_results"></div>
+          </div>
+          <div class="col">
+              <div id="vote_tallies"></div>
+          </div>
+        </div>
+
     </div>
-
-<div class="stackedTool">
-
-</div>
-    <div class="row">
-      <div class="col">
-        <div id="yearly_results"></div>
-      </div>
-      <div class="col">
-        <div id="vote_tallies"></div>
-      </div>
-    </div>
-
-</div>
-    <script src="static/js/senate_votes.js"></script>
-
 </div>
 {% endblock %}
