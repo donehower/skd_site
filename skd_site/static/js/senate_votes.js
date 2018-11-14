@@ -214,7 +214,7 @@ function draw_dashboard(data) {
     function showResult(result, xr, yr, color) {
           stackedTool.style("display", "inline")
               .style("left", (d3.event.pageX-15) + "px")
-              .style("top", (250) + "px")
+              .style("top", (300) + "px")
               .style("background-color", color);
 
           stackedTool.select("text.stackedResult")
