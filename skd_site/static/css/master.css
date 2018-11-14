@@ -143,7 +143,7 @@ body {
 .stackedTool {
     position: absolute;
     text-align: center;
-    width: auto;
+    width: 75px;
     height: auto;
     padding: 2px;
     font: 12px sans-serif;
