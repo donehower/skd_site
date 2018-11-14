@@ -151,4 +151,5 @@ body {
     border: 0px;
     border-radius: 2px;
     pointer-events: none;
+    z-index: 99;
 }
