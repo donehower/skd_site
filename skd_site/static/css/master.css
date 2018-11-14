@@ -6,12 +6,6 @@ body {
   background-attachment: fixed;
 }
 
-.d3_senate_page {
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
-}
-
 .plain_text {
   font-size: calc(18px - 0.25vw);
 }
@@ -95,6 +89,14 @@ body {
 }
 
 /* ------------------------- D3 Styling ------------------------------- */
+
+.d3_senate_page {
+  background-color: white;
+  padding-left: 50px;
+  min-width: 1200px;
+}
+
+
 .legend {
   overflow: visible;
 }
