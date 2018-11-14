@@ -44,10 +44,11 @@ def d3_senate():
 @core.route('/_get_senate_data', methods=['GET', 'POST'])
 def _get_senate_data():
 
-    data = mongo.db.senate_data.find()
+    # data = mongo.db.senate_data.find()
+    data = mongo.db.senate_data.find({}, {'_id': 0, 'year': 1, 'result': 2, 'yeas': 3, 'nays': 4, 'title': 5})
     data = [n for n in data]
-    for each in data:
-        if '_id' in each.keys():
-            each.pop('_id')
-            
+    # for each in data:
+    #     if '_id' in each.keys():
+    #         each.pop('_id')
+
     return jsonify(data)
