@@ -31,7 +31,7 @@ numpy==1.15.1
 oauth2==1.9.0.post1
 oauthlib==2.0.7
 packaging==17.1
-Pillow==5.2.0
+Pillow==6.2.0
 psycopg2==2.7.5
 psycopg2-binary==2.7.5
 pycparser==2.18
