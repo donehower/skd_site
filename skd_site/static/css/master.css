@@ -1,7 +1,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-image: url("../images/lotus_corner_v2.jpg");
+  background-image: url("../images/white_bands_v1.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -15,7 +15,7 @@ body {
 }
 
 #white_alpha {
-  background-color: rgba(255, 255, 240, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .white_alpha {
@@ -72,20 +72,28 @@ body {
 }
 
 #project_card_button {
-  background-color: rgba(255, 255, 230, 0.6);
+  background-color: rgba(200, 200, 200, 0.2);
   color: rgba(10, 10, 10, 0.8);
 }
 
 .special-card {
-  background-color: rgba(255, 255, 245, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .special-card-heading {
-  background-color: rgba(255, 255, 245, 1.0);
+  background-color: rgba(200, 200, 200, 0.75);
 }
 
 #hint {
   font-size: 12px;
+}
+
+.card {
+  border: none;
+}
+
+.card-header {
+  border-bottom: none;
 }
 
 /* ------------------------- D3 Styling ------------------------------- */
